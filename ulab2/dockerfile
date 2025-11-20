@@ -1,0 +1,6 @@
+FROM alpine:latest
+RUN apk update && apk add util-linux bash
+COPY start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+WORKDIR /app
+CMD ["/usr/local/bin/start.sh"]
