@@ -1,0 +1,12 @@
+services:
+  dispatcher:
+    build: .
+    volumes:
+      - /dev/shm:/dev/shm
+    stdin_open: true
+    tty: true
+
+  worker:
+    build: .
+    volumes:
+      - /dev/shm:/dev/shm
